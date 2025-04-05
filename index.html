@@ -12,8 +12,8 @@
 <script>var xhttp = new XMLHttpRequest();</script>
 <script>function getsend(arg) { xhttp.open('GET', 'https://192.168.1.39:80/' + arg + '?' + new Date().getTime(), true); xhttp.send() } </script>
 <script>
-    const ws = new WebSocket('wss://localhost:8080');
-    ws.onopen = () => ws.send('Hello!');
+    const ws = new WebSocket('ws://192.168.1.39:443/ws');
+    ws.onopen = () => ws.send('Hello! FROM the client');
     ws.onmessage = (e) => console.log(e.data);
 </script>
 <p align=center>ARDUINO HOME 2</p>
